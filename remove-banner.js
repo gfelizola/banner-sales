@@ -14,17 +14,18 @@ const {
     TITLE
 } = require('./constants');
 
-const validate = (users = []) => {
+const remove = (users = []) => {
     if( ! Array.isArray(users) ) {
         throw new Error('Users must be an Array');
         return;
     }
 
-    const usersList = !users.length ? db.get('user').map('user_id').value() : users;
+    if ( ! users.length ) {
+        throw new Error('Inform users to remove banner');
+        return;
+    }
 
-    let totalUsers = usersList.length;
-
-    spinner.setSpinnerTitle(`Getting banner status for ${totalUsers} user(s)`.yellow);
+    spinner.setSpinnerTitle(`Getting banner information for ${totalUsers} user(s)`.yellow);
     spinner.start();
 
     return Promise.all(usersList.map(user => {
@@ -50,8 +51,8 @@ const validate = (users = []) => {
     }));
 }
 
-const getDuplicates = allBanners => {
-    let duplicates = [];
+const getBannersInfo = allBanners => {
+    let banners = [];
 
     allBanners.forEach( userMessages => {
         if( isNil( userMessages ) ) return;
@@ -64,20 +65,20 @@ const getDuplicates = allBanners => {
         if( ! isNil( vendas ) && vendas.messages ){
             const messages = vendas.messages.filter(m => m.title.text === TITLE);
 
-            if( messages.length > 1 ){
+            if( messages.length >= 1 ){
                 // console.log(`User ${userID} has duplicated invoices message`.red);
-                duplicates.push({ userID, qtde: messages.length, ids: messages.map(m => m.message_id ) });
+                banners.push({ userID, qtde: messages.length, ids: messages.map(m => m.message_id ) });
             }
         }
     });
 
-    console.table(duplicates.map( d => ({ user: d.userID, qtde: d.qtde })))
+    console.table(banners.map( d => ({ user: d.userID, qtde: d.qtde })))
 
-    return duplicates;
+    return banners;
 }
 
-const showUserOptions = (duplicates) => {
-    if ( !duplicates.length ){
+const showUserOptions = (banners) => {
+    if (!banners.length ){
         throw '\n ✓ No users with duplicated banners found - Validation complete'.green;
     }
 
@@ -85,20 +86,20 @@ const showUserOptions = (duplicates) => {
         .prompt([{
             type: 'confirm',
             name: 'clear',
-            message: `Clear duplicated messages for ${duplicates.length} users`
+            message: `Clear duplicated messages for ${banners.length} users`
         }])
         .then(res => {
             return {
                 clear: res.clear,
-                duplicates
+                banners
             }
         })
 }
 
-const normalizeList = ({ clear, duplicates }) => {
+const normalizeList = ({ clear, banners }) => {
     if( ! clear ) return [];
 
-    const listToDelete = duplicates.reduce((list, row) => {
+    const listToDelete = banners.reduce((list, row) => {
         const listForUser = row.ids.slice( 1, row.qtde );
         return list.concat(listForUser.map(message => ({ userID: row.userID, messageID: message })));
     }, []);
@@ -107,7 +108,7 @@ const normalizeList = ({ clear, duplicates }) => {
 }
 
 const startClear = list => {
-    spinner.setSpinnerTitle(`Deleting ${list.length} duplicated banners`.yellow);
+    spinner.setSpinnerTitle(`Deleting ${list.length} banners`.yellow);
     spinner.start();
     return Promise.all( list.map( message => {
         return API.deleteBanner( message.userID, message.messageID )
@@ -125,32 +126,22 @@ const reviewUsersInDb = list => {
 
     list.forEach( user => {
         const currentUser = users.find({ user_id: user.userID });
-        const has = currentUser.size().value() > 0;
 
-        if( has ){
-            currentUser.assign({
-                verified: Date.now(),
-                has_banner: true
-            })
-            .write()
-        } else {
-            users
-                .push({
-                    user_id: user.userID,
-                    verified: Date.now(),
-                    has_banner: true,
-                })
-                .write();
-        }
+        currentUser.assign({
+            verified: true,
+            has_banner: false,
+            removed: Date.now()
+        })
+        .write()
     });
 
     spinner.stop(true);
-    console.log('\n ✓ Validation complete'.green);
+    console.log('\n ✓ Remove complete'.green);
 }
 
 const execute = (users) => {
-    validate(users)
-        .then(getDuplicates)
+    remove(users)
+        .then(getBannersInfo)
         .then(showUserOptions)
         .then(normalizeList)
         .then(startClear)

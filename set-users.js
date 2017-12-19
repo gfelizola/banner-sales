@@ -77,7 +77,8 @@ const saveUsersFromResults = resultsWithUser => {
         if (has) {
             currentUser.assign({
                 verified: true,
-                has_banner: true
+                has_banner: true,
+                created: Date.now()
             })
             .write()
         } else {
@@ -85,7 +86,8 @@ const saveUsersFromResults = resultsWithUser => {
                 .push({
                     user_id: user,
                     verified: true,
-                    has_banner: true
+                    has_banner: true,
+                    created: Date.now()
                 })
                 .write();
         }

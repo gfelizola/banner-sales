@@ -33,6 +33,11 @@ const help = (notFound = false) => {
                     description: 'Validate if users has duplicated banners'
                 },
                 {
+                    name: 'remove-banners'.yellow,
+                    alias: 'r'.yellow,
+                    description: 'Remove banners for users'
+                },
+                {
                     name: 'help'.yellow,
                     alias: 'h'.yellow,
                     description: 'Print this usage guide.'
