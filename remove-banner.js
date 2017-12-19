@@ -14,17 +14,18 @@ const {
     TITLE
 } = require('./constants');
 
-const remove = (users = []) => {
-    if( ! Array.isArray(users) ) {
+const remove = (usersList = []) => {
+    if (!Array.isArray(usersList) ) {
         throw new Error('Users must be an Array');
         return;
     }
 
-    if ( ! users.length ) {
-        throw new Error('Inform users to remove banner');
+    if (!usersList.length ) {
+        throw new Error('Inform users to remove banner'.red);
         return;
     }
 
+    let totalUsers = usersList.length;
     spinner.setSpinnerTitle(`Getting banner information for ${totalUsers} user(s)`.yellow);
     spinner.start();
 
@@ -72,8 +73,6 @@ const getBannersInfo = allBanners => {
         }
     });
 
-    console.table(banners.map( d => ({ user: d.userID, qtde: d.qtde })))
-
     return banners;
 }
 
@@ -82,11 +81,15 @@ const showUserOptions = (banners) => {
         throw '\n ✓ No users with duplicated banners found - Validation complete'.green;
     }
 
+    const totalMessages = banners.reduce( (tm, cv) => {
+        return tm += cv.ids.length;
+    }, 0);
+
     return inquirer
         .prompt([{
             type: 'confirm',
             name: 'clear',
-            message: `Clear duplicated messages for ${banners.length} users`
+            message: `Clear ${totalMessages} messages for ${banners.length} users`
         }])
         .then(res => {
             return {
@@ -100,8 +103,7 @@ const normalizeList = ({ clear, banners }) => {
     if( ! clear ) return [];
 
     const listToDelete = banners.reduce((list, row) => {
-        const listForUser = row.ids.slice( 1, row.qtde );
-        return list.concat(listForUser.map(message => ({ userID: row.userID, messageID: message })));
+        return list.concat(row.ids.map(message => ({ userID: row.userID, messageID: message })));
     }, []);
 
     return listToDelete;
@@ -117,6 +119,12 @@ const startClear = list => {
                 console.log(` ✓ Message ${message.messageID} delete for user ${message.userID}`.green);
                 spinner.start();
                 return message;
+            })
+            .catch(err => {
+                spinner.stop(true);
+                console.log(` X Error deleting message ${message.messageID} for user ${message.userID}`.red);
+                spinner.start();
+                return err;
             })
     }));
 }

@@ -2,8 +2,10 @@
   "user": [
     {
       "user_id": "282763600",
-      "verified": 1513688747379,
-      "has_banner": true
+      "verified": true,
+      "has_banner": false,
+      "removed": 1513691120345,
+      "created": 1513691078731
     },
     {
       "user_id": "288710309",
@@ -18,7 +20,8 @@
     {
       "user_id": "20480238",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195878
     },
     {
       "user_id": "20887287",
@@ -73,7 +76,8 @@
     {
       "user_id": "29607944",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195886
     },
     {
       "user_id": "30390355",
@@ -113,7 +117,8 @@
     {
       "user_id": "33391986",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195887
     },
     {
       "user_id": "33519758",
@@ -138,7 +143,8 @@
     {
       "user_id": "36267501",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195888
     },
     {
       "user_id": "38775514",
@@ -242,8 +248,9 @@
     },
     {
       "user_id": "105445723",
-      "verified": 1513688747396,
-      "has_banner": true
+      "verified": true,
+      "has_banner": false,
+      "removed": 1513691195852
     },
     {
       "user_id": "106748418",
@@ -258,12 +265,14 @@
     {
       "user_id": "109689940",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195853
     },
     {
       "user_id": "113214310",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195855
     },
     {
       "user_id": "114395621",
@@ -303,7 +312,8 @@
     {
       "user_id": "117447690",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195856
     },
     {
       "user_id": "118592553",
@@ -383,7 +393,8 @@
     {
       "user_id": "83757740",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195903
     },
     {
       "user_id": "84116832",
@@ -393,12 +404,14 @@
     {
       "user_id": "85039702",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195904
     },
     {
       "user_id": "85343218",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195905
     },
     {
       "user_id": "85938742",
@@ -433,7 +446,8 @@
     {
       "user_id": "89369058",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195906
     },
     {
       "user_id": "92033207",
@@ -453,7 +467,8 @@
     {
       "user_id": "94132957",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195907
     },
     {
       "user_id": "122887822",
@@ -468,7 +483,8 @@
     {
       "user_id": "126668061",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195857
     },
     {
       "user_id": "127364795",
@@ -533,7 +549,8 @@
     {
       "user_id": "137445882",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195857
     },
     {
       "user_id": "137812514",
@@ -563,12 +580,14 @@
     {
       "user_id": "143490142",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195858
     },
     {
       "user_id": "143854678",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195859
     },
     {
       "user_id": "144235464",
@@ -603,7 +622,8 @@
     {
       "user_id": "146353101",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195860
     },
     {
       "user_id": "147193514",
@@ -623,7 +643,8 @@
     {
       "user_id": "147924918",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195861
     },
     {
       "user_id": "149011868",
@@ -638,7 +659,8 @@
     {
       "user_id": "150867524",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195862
     },
     {
       "user_id": "151371928",
@@ -678,7 +700,8 @@
     {
       "user_id": "155633244",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195862
     },
     {
       "user_id": "156030183",
@@ -728,12 +751,14 @@
     {
       "user_id": "163104376",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195865
     },
     {
       "user_id": "163115604",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195866
     },
     {
       "user_id": "163689561",
@@ -788,7 +813,8 @@
     {
       "user_id": "172690104",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195866
     },
     {
       "user_id": "173052612",
@@ -838,7 +864,8 @@
     {
       "user_id": "176949485",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195867
     },
     {
       "user_id": "177044856",
@@ -933,7 +960,8 @@
     {
       "user_id": "189434840",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195873
     },
     {
       "user_id": "190569960",
@@ -988,7 +1016,8 @@
     {
       "user_id": "200796538",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195878
     },
     {
       "user_id": "203924348",
@@ -1138,12 +1167,14 @@
     {
       "user_id": "224640447",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195879
     },
     {
       "user_id": "226310978",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195881
     },
     {
       "user_id": "226405409",
@@ -1193,7 +1224,8 @@
     {
       "user_id": "233184614",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195881
     },
     {
       "user_id": "234158557",
@@ -1618,7 +1650,8 @@
     {
       "user_id": "237842279",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195882
     },
     {
       "user_id": "157907735",
@@ -1668,7 +1701,8 @@
     {
       "user_id": "226156804",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195880
     },
     {
       "user_id": "51393722",
@@ -1703,7 +1737,8 @@
     {
       "user_id": "24734423",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195883
     },
     {
       "user_id": "116285686",
@@ -1763,7 +1798,8 @@
     {
       "user_id": "15932638",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195864
     },
     {
       "user_id": "190596131",
@@ -1873,7 +1909,8 @@
     {
       "user_id": "26407121",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195884
     },
     {
       "user_id": "127314782",
@@ -2153,7 +2190,8 @@
     {
       "user_id": "63954818",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195898
     },
     {
       "user_id": "200348580",
@@ -2203,7 +2241,8 @@
     {
       "user_id": "190691532",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195874
     },
     {
       "user_id": "77532804",
@@ -2478,7 +2517,8 @@
     {
       "user_id": "61447368",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195896
     },
     {
       "user_id": "97661359",
@@ -2533,7 +2573,8 @@
     {
       "user_id": "19536353",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195876
     },
     {
       "user_id": "155715917",
@@ -2983,7 +3024,8 @@
     {
       "user_id": "191051195",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195875
     },
     {
       "user_id": "18577562",
@@ -3128,7 +3170,8 @@
     {
       "user_id": "89573340",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195907
     },
     {
       "user_id": "33092163",
@@ -3178,7 +3221,8 @@
     {
       "user_id": "185721330",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195868
     },
     {
       "user_id": "15165051",
@@ -3348,7 +3392,8 @@
     {
       "user_id": "36754853",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195890
     },
     {
       "user_id": "204943017",
@@ -3368,7 +3413,8 @@
     {
       "user_id": "84542208",
       "verified": true,
-      "has_banner": true
+      "has_banner": false,
+      "removed": 1513691195903
     },
     {
       "user_id": "180035930",

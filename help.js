@@ -5,6 +5,7 @@ const optionDefinitions = [
     { name: 'get-users', alias: 'g', type: Boolean },
     { name: 'set-users', alias: 's', type: Boolean },
     { name: 'validate-banners', alias: 'v', type: Boolean },
+    { name: 'remove-banners', alias: 'r', type: Boolean },
     { name: 'help', alias: 'h', type: Boolean },
 ];
 

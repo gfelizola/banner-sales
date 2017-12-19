@@ -78,7 +78,8 @@ const saveUsersFromResults = resultsWithUser => {
             currentUser.assign({
                 verified: true,
                 has_banner: true,
-                created: Date.now()
+                created: Date.now(),
+                removed: null
             })
             .write()
         } else {
@@ -87,7 +88,8 @@ const saveUsersFromResults = resultsWithUser => {
                     user_id: user,
                     verified: true,
                     has_banner: true,
-                    created: Date.now()
+                    created: Date.now(),
+                    removed: null
                 })
                 .write();
         }

@@ -12,12 +12,14 @@ const db               = require('./db');
 const getUsers         = require('./get-users');
 const setUsers         = require('./set-users');
 const validateBanners  = require('./validate-banner');
+const removeBanners    = require('./remove-banner');
 
 
 const commands = {
     'get-users': getUsers,
     'set-users': setUsers,
     'validate-banners': validateBanners,
+    'remove-banners': removeBanners,
     'help': help,
 }
 
