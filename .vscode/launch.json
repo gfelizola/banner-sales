@@ -1,0 +1,37 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Save banners",
+            "runtimeExecutable": "nodemon",
+            "program": "${workspaceFolder}/index.js",
+            "restart": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "args": [
+                "--set-users",
+                "282763600",
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Validate banners",
+            "program": "${workspaceFolder}/index.js",
+            "args": [
+                "--validate-banners",
+                "20480238",
+                "20887287",
+                "22670344",
+                "22709224",
+                "23765264"
+            ],
+            "console": "externalTerminal",
+        }
+    ]
+}
