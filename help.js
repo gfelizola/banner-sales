@@ -6,6 +6,7 @@ const optionDefinitions = [
     { name: 'set-users', alias: 's', type: Boolean },
     { name: 'validate-banners', alias: 'v', type: Boolean },
     { name: 'remove-banners', alias: 'r', type: Boolean },
+    { name: 'info-banners', alias: 'i', type: Boolean },
     { name: 'help', alias: 'h', type: Boolean },
 ];
 
@@ -37,6 +38,11 @@ const help = (notFound = false) => {
                     name: 'remove-banners'.yellow,
                     alias: 'r'.yellow,
                     description: 'Remove banners for users'
+                },
+                {
+                    name: 'info-banners'.yellow,
+                    alias: 'i'.yellow,
+                    description: 'Get banners information for users'
                 },
                 {
                     name: 'help'.yellow,

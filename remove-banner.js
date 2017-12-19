@@ -78,7 +78,7 @@ const getBannersInfo = allBanners => {
 
 const showUserOptions = (banners) => {
     if (!banners.length ){
-        throw '\n ✓ No users with duplicated banners found - Validation complete'.green;
+        throw '\n ✓ No banners found for this users'.green;
     }
 
     const totalMessages = banners.reduce( (tm, cv) => {

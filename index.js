@@ -13,6 +13,7 @@ const getUsers         = require('./get-users');
 const setUsers         = require('./set-users');
 const validateBanners  = require('./validate-banner');
 const removeBanners    = require('./remove-banner');
+const bannersInfo      = require('./banners-info');
 
 
 const commands = {
@@ -20,6 +21,7 @@ const commands = {
     'set-users': setUsers,
     'validate-banners': validateBanners,
     'remove-banners': removeBanners,
+    'info-banners': bannersInfo,
     'help': help,
 }
 
