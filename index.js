@@ -14,6 +14,7 @@ const setUsers         = require('./set-users');
 const validateBanners  = require('./validate-banner');
 const removeBanners    = require('./remove-banner');
 const bannersInfo      = require('./banners-info');
+const hasBanners       = require('./has-banners');
 
 
 const commands = {
@@ -22,6 +23,7 @@ const commands = {
     'validate-banners': validateBanners,
     'remove-banners': removeBanners,
     'info-banners': bannersInfo,
+    'has-banners': hasBanners,
     'help': help,
 }
 
